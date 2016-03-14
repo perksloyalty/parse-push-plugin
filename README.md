@@ -145,6 +145,22 @@ content in it and replace the hex color value of the form `#AARRGGBB` to your li
     </resources>
     ```
 
+####Add GCM support
+```xml
+<receiver android:name="com.parse.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+    <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="$PACKAGE_NAME" />
+    </intent-filter>
+</receiver>
+```
+```xml
+<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+<permission android:protectionLevel="signature" android:name="$PACKAGE_NAME.permission.C2D_MESSAGE" />
+<uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE" />
+```
 
 ####Android Without GCM support:
 If you only care about GCM devices, you're good to go. Move on to the [Usage](#usage) section.
