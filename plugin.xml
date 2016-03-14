@@ -33,6 +33,7 @@
         </config-file>
 
         <source-file src="src/android/parse/Parse-1.10.1.jar" target-dir="libs" framework="true" />
+        <source-file src="src/android/parse/PPNS-1.10.2.jar" target-dir="libs" framework="true" />
         <source-file src="src/android/parse/bolts-android-1.2.1.jar" target-dir="libs" framework="true" />
 		<source-file src="src/android/parse/android-support-v4.jar" target-dir="libs" framework="true" />
         <source-file src="src/android/ParsePushPlugin.java" target-dir="src/com/phonegap/parsepushplugin" />
